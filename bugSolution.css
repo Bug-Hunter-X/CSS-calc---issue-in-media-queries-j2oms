@@ -1,0 +1,9 @@
+The correct way to use `calc()` with percentages inside media queries is to use viewport units (vw, vh) instead of direct percentages.  Here's an example:
+
+```css
+@media (max-width: calc(100vw - 50px)) {
+  /* styles */
+}
+```
+
+This uses `100vw`, which represents 100% of the viewport width, allowing `calc()` to perform the calculation correctly.
