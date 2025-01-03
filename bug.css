@@ -1,0 +1,9 @@
+The CSS property `calc()` is not working as expected when used with percentages inside a media query. For example, the following code will not work as expected:
+
+```css
+@media (max-width: calc(100% - 50px)) {
+  /* styles */
+}
+```
+
+The issue is that the `calc()` function doesn't work directly with percentages inside media queries. Instead, you must use viewport units like `vw`.
